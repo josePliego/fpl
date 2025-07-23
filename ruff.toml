@@ -30,7 +30,7 @@ exclude = [
 line-length = 90
 indent-width = 4
 
-target-version = "py313"
+target-version = "py312"
 
 [lint]
 exclude = ["notebooks/*.py"]

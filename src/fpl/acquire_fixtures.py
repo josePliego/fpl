@@ -3,13 +3,13 @@ import datetime
 import orjson
 import requests
 
-url = "https://fantasy.premierleague.com/api/bootstrap-static/"
+url = "https://fantasy.premierleague.com/api/fixtures/"
 response = requests.get(url)
 data = response.json()
-date_time = datetime.datetime.now().replace(microsecond=0).isoformat()
-data["extracted-on"] = date_time
+date = datetime.datetime.now().date()
 
-with open(f"data/{date_time}.json", "wb") as f:
+
+with open(f"data/fixtures/{date}.json", "wb") as f:
     f.write(
         orjson.dumps(
             data,

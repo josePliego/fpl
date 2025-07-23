@@ -10,5 +10,22 @@ dependencies = [
     "orjson>=3.10.15",
     "polars>=1.22.0",
     "requests>=2.32.3",
-    "ruff>=0.9.5",
 ]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.17.0",
+    "pre-commit>=4.2.0",
+    "ruff>=0.9.5",
+    "types-requests>=2.32.4.20250611",
+]
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+files = ["src"]
+warn_unused_configs = true
+show_error_codes = true
+pretty = true
+cache_dir = ".mypy_cache"
+

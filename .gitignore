@@ -1,5 +1,5 @@
 # Custom
-*/.DS_Store
+**/.DS_Store
 
 # Python-generated files
 __pycache__/
@@ -8,6 +8,7 @@ build/
 dist/
 wheels/
 *.egg-info
+.mypy_cache/
 
 # Virtual environments
 .venv
